@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+*.sqlite
+
+# VS Code Einstellungen & Ordner
+.vscode/
+
+# Betriebssystem-Dateien (Mac / Windows)
+.DS_Store
+Thumbs.db
+
+# Environment-Dateien (falls du später mal API-Keys oder Umgebungsvariablen nutzt)
+.env

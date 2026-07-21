@@ -9,13 +9,14 @@ class WeatherAPIClient:
     def __init__(self, timeout: int = 10):
         self.timeout = timeout
 
-    def fetch_solar_data(self, latitude: float, longitude: float) -> Optional[Dict[str, Any]]:
+    def fetch_solar_data(self, latitude: float, longitude: float, past_days: int = 7) -> Optional[Dict[str, Any]]:
         """
         Fetches hourly direct normal irradiance (DNI) and global horizontal irradiance (GHI).
         """
         params = {
             "latitude": latitude,
             "longitude": longitude,
+            "past_days": past_days,
             "hourly": "direct_normal_irradiance,global_tilted_irradiance,temperature_2m",
             "timezone": "auto"
         }
