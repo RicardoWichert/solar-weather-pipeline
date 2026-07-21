@@ -21,6 +21,8 @@ class SolarDataProcessor:
         
         # Fill potential NaN values cleanly
         df.fillna(0, inplace=True)
+        now = pd.Timestamp.now()
+        df = df[df["timestamp"] <= now]
         return df
 
     @staticmethod
